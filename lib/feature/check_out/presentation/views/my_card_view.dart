@@ -16,7 +16,6 @@ class MyCardView extends StatelessWidget {
             AssetsConstants.arrowSVG,
           ),
         ),
-        centerTitle: true,
         title: Text(
           'My Cart',
         ),
