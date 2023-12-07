@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 import 'package:flutter_payment/core/constants/assets.dart';
+import 'package:flutter_payment/feature/check_out/presentation/views/thank_you_view.dart';
 import 'package:flutter_payment/feature/check_out/presentation/widgets/custom_button.dart';
 import 'package:flutter_payment/feature/check_out/presentation/widgets/custom_credit_card.dart';
 import 'package:flutter_payment/feature/check_out/presentation/widgets/payment_details_method_item.dart';
@@ -43,11 +44,11 @@ class _PaymentDetailsBodyState extends State<PaymentDetailsBody> {
           child: CustomButton(buttonName: 'Pay', onTap: () {
             if(formKey.currentState!.validate()){
               formKey.currentState!.save();
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ThankYouView(),));
             }else{
               setState(() {
                 autoValidateMode = AutovalidateMode.always;
               });
-
             }
           },),
         )),
