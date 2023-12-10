@@ -42,5 +42,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-windows/
-web/
+windows
+web
+lib/core/constants/key_conatants.dart

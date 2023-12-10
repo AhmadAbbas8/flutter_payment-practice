@@ -18,6 +18,7 @@ class _PaymentMethodsListViewState extends State<PaymentMethodsListView> {
   ];
 
   int activeIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -44,3 +45,4 @@ class _PaymentMethodsListViewState extends State<PaymentMethodsListView> {
     );
   }
 }
+

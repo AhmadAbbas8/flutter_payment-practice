@@ -1,9 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_payment/core/constants/assets.dart';
 import 'package:flutter_payment/core/utils/styles.dart';
 import 'package:flutter_payment/feature/check_out/presentation/views/payment_details_view.dart';
 import 'package:flutter_payment/feature/check_out/presentation/widgets/custom_button.dart';
 import 'package:flutter_payment/feature/check_out/presentation/widgets/order_info_item.dart';
+import 'package:flutter_payment/feature/check_out/presentation/widgets/payment_methods_bottom_sheet.dart';
 import 'package:flutter_payment/feature/check_out/presentation/widgets/total_price.dart';
 
 class MyCardViewBody extends StatelessWidget {
@@ -39,9 +41,9 @@ class MyCardViewBody extends StatelessWidget {
           SizedBox(height: 16),
           CustomButton(
             buttonName: 'Complete Payment',
-            onTap: () => Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => PaymentDetailsView(),
-            )),
+            onTap: () {
+              showModalBottomSheet(context: context, builder: (context) => PaymentMethodsBottomSheet(),);
+            },
           ),
           SizedBox(height: 12),
         ],
