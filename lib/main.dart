@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_payment/core/constants/key_conatants.dart';
+import 'package:flutter_payment/core/services/service_locator.dart';
 import 'package:flutter_payment/core/utils/styles.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 
 import 'feature/check_out/presentation/views/my_card_view.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
   Stripe.publishableKey = KeysConstants.stripePublishableKey;
+ await ServiceLocator.setup();
   runApp(const CheckOutApp());
 }
 

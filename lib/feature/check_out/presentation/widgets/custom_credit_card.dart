@@ -1,6 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
-import 'package:flutter_payment/feature/check_out/presentation/widgets/custom_button.dart';
 
 class CustomCreditCard extends StatefulWidget {
   const CustomCreditCard({super.key, required this.formKey, required this.autovalidateMode});
@@ -35,7 +35,9 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
           showBackView: showBackView,
           isHolderNameVisible: true,
           onCreditCardWidgetChange: (CreditCardBrand creditCardBrand) {
-            print(creditCardBrand.brandName);
+            if (kDebugMode) {
+              print(creditCardBrand.brandName);
+            }
           },
           enableFloatingCard: true,
           bankName: 'Al-Ahly',

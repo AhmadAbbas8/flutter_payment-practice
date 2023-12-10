@@ -16,11 +16,11 @@ class MyCardView extends StatelessWidget {
             AssetsConstants.arrowSVG,
           ),
         ),
-        title: Text(
+        title: const Text(
           'My Cart',
         ),
       ),
-      body:MyCardViewBody() ,
+      body:const MyCardViewBody() ,
     );
   }
 }

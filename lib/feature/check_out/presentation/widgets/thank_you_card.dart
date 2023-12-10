@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_payment/core/utils/styles.dart';
 import 'package:flutter_payment/feature/check_out/presentation/widgets/payment_info_item.dart';

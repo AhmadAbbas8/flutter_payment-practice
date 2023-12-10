@@ -17,7 +17,7 @@ class OrderInfoItem extends StatelessWidget {
           textAlign: TextAlign.center,
           style: Styles.style18,
         ),
-        Spacer(),
+        const Spacer(),
         Text(
           value,
           textAlign: TextAlign.center,

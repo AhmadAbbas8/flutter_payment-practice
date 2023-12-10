@@ -32,7 +32,7 @@ class ThankYouViewBody extends StatelessWidget {
               child: const CircleAvatar(
                 backgroundColor: Colors.white,
               ),),
-           Positioned(
+           const Positioned(
             top: -50,
             left: 0,
             right: 0,

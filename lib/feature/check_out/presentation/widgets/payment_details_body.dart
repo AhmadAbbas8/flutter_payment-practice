@@ -1,12 +1,9 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_credit_card/flutter_credit_card.dart';
-import 'package:flutter_payment/core/constants/assets.dart';
 import 'package:flutter_payment/feature/check_out/presentation/views/thank_you_view.dart';
 import 'package:flutter_payment/feature/check_out/presentation/widgets/custom_button.dart';
 import 'package:flutter_payment/feature/check_out/presentation/widgets/custom_credit_card.dart';
-import 'package:flutter_payment/feature/check_out/presentation/widgets/payment_details_method_item.dart';
 import 'package:flutter_payment/feature/check_out/presentation/widgets/payment_method_list_view.dart';
-import 'package:flutter_svg/svg.dart';
 
 class PaymentDetailsBody extends StatefulWidget {
   const PaymentDetailsBody({super.key});
@@ -27,7 +24,9 @@ class _PaymentDetailsBodyState extends State<PaymentDetailsBody> {
       SliverToBoxAdapter(
         child: PaymentMethodsListView(
           updatePaymentMethod: ({required index}) {
-            print(index);
+            if (kDebugMode) {
+              print(index);
+            }
           },
         ),
       ),
@@ -44,7 +43,7 @@ class _PaymentDetailsBodyState extends State<PaymentDetailsBody> {
           child: CustomButton(buttonName: 'Pay', onTap: () {
             if(formKey.currentState!.validate()){
               formKey.currentState!.save();
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ThankYouView(),));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const ThankYouView(),));
             }else{
               setState(() {
                 autoValidateMode = AutovalidateMode.always;

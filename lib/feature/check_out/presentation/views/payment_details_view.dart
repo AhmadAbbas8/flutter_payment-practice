@@ -16,11 +16,11 @@ class PaymentDetailsView extends StatelessWidget {
             AssetsConstants.arrowSVG,
           ),
         ),
-        title: Text(
+        title: const Text(
           'Payment Details',
         ),
       ),
-      body: PaymentDetailsBody(),
+      body: const PaymentDetailsBody(),
     );
   }
 }
