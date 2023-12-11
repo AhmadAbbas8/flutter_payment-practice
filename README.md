@@ -1,16 +1,40 @@
-# flutter_payment
+# Flutter Posts App with clean architecture and clean Code
 
-A new Flutter project.
+A Flutter Posts App with clean architecture
+
+Star this repo if you like what you see.
+
+*Packages I use:*
+
+- flutter_stripe: [link](https://pub.dev/packages/flutter_stripe)
+
+        For payment integration
+- flutter_bloc: [link](https://pub.dev/packages/flutter_bloc)
+
+        For State State-management
+- dartz: [link](https://pub.dev/packages/dartz)
+
+        To add function programming principles to dart
+- get_it: [link](https://pub.dev/packages/get_it)
+
+        To help me in dependency Injection 
+- dio: [link](https://pub.dev/packages/dio)
+
+        For API requests
+- flutter_svg: [link](https://pub.dev/packages/flutter_svg)
+- font_awesome_flutter: [link](https://pub.dev/packages/font_awesome_flutter)
+
+
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+***Note***: Make sure your Flutter environment is setup.
+#### Installation
 
-A few resources to get you started if this is your first Flutter project:
+In the command terminal, run the following commands:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    $ git clone https://github.com/AhmadAbbas8/flutter_payment-practice.git
+    $ cd flutter_payment-practice/
+    $ flutter pub get
+    $ flutter run
