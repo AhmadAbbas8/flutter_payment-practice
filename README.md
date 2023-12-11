@@ -1,6 +1,6 @@
-# Flutter Posts App with clean architecture and clean Code
+# Flutter Payment App
 
-A Flutter Posts App with clean architecture
+A Flutter Payment App with clean architecture
 
 Star this repo if you like what you see.
 
